@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wyatts Barbers | Wolseley Road Plymouth</title>
+<meta name="description" content="Wyatts Barbers on Wolseley Road, Plymouth. Friendly local barber shop — great cuts, great chat.">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,600&display=swap');
+:root { --teal: #1a7a7a; --dark-teal: #0d5555; --light-teal: #30a0a0; --white: #f2faf8; --warm-white: #f7fbfa; --accent: #40c0c0; --dark-bg: #0a2a2a; }
+body { font-family: 'DM Sans', sans-serif; background: var(--warm-white); color: #1a3330; }
+h1,h2,h3 { font-family: 'DM Serif Display', serif; }
+.hero {
+  background: linear-gradient(145deg, var(--dark-teal) 0%, var(--teal) 50%, #107070 100%);
+  color: var(--white); padding: 100px 20px 80px; text-align: center; position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(64,192,192,0.15) 0%, transparent 50%);
+}
+.hero h1 { font-size: 3.3em; letter-spacing: 1px; }
+.hero .subtitle { font-size: 1.2em; color: #80d0d0; letter-spacing: 4px; margin-top: 5px; }
+.hero p { margin: 18px 0; font-size: 1.05em; color: #b0e0e0; }
+.hero .cta {
+  display: inline-block; background: var(--white); color: var(--dark-teal); padding: 14px 40px;
+  border-radius: 30px; text-decoration: none; font-weight: 600; transition: .3s;
+}
+.hero .cta:hover { background: var(--accent); color: var(--white); transform: translateY(-2px); box-shadow: 0 4px 20px rgba(64,192,192,0.3); }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 70px 0; }
+.section h2 { text-align: center; font-size: 2.2em; color: var(--teal); margin-bottom: 50px; }
+.section h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--teal); margin: 12px auto 0; border-radius: 2px; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap: 25px; }
+.service-card {
+  background: white; border-radius: 16px; padding: 30px 20px; text-align: center;
+  box-shadow: 0 4px 20px rgba(13,85,85,0.06); transition: .3s; border: 1px solid #d0ebe8;
+}
+.service-card:hover { border-color: var(--teal); transform: translateY(-4px); box-shadow: 0 8px 30px rgba(13,85,85,0.12); }
+.service-card h3 { color: var(--dark-teal); font-size: 1.35em; }
+.service-card .price { color: var(--teal); font-size: 1.4em; font-weight: 700; margin: 10px 0; }
+.service-card p { color: #558888; }
+.featured { background: var(--warm-white); }
+.local { background: var(--dark-teal); color: var(--white); }
+.local h2 { color: var(--white); }
+.local h2::after { background: var(--accent); }
+.local-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.local-grid p { color: #b0ddd5; font-size: 1.05em; line-height: 1.8; }
+.local-grid ul { list-style: none; }
+.local-grid ul li { padding: 8px 0; color: #c0e8e0; padding-left: 28px; position: relative; }
+.local-grid ul li::before { content: '✦'; position: absolute; left: 0; color: var(--accent); }
+.team { background: white; }
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap: 20px; }
+.team-member {
+  text-align: center; padding: 20px; border-radius: 12px; background: var(--warm-white); transition: .3s;
+}
+.team-member:hover { background: #e0f5f0; }
+.team-member .avatar { font-size: 3em; margin-bottom: 8px; display: block; }
+.team-member h3 { color: var(--dark-teal); font-size: 1.1em; }
+.team-member p { color: #558888; font-size: 0.9em; }
+.contact { background: #def2ee; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.contact-info p { margin: 12px 0; font-size: 1.05em; }
+.contact-info strong { color: var(--dark-teal); }
+.contact-info a { color: var(--teal); text-decoration: none; font-weight: 600; }
+.contact-info a:hover { text-decoration: underline; }
+footer {
+  background: var(--dark-bg); color: #609090; text-align: center; padding: 30px 20px; font-size: 0.9em;
+}
+footer a { color: var(--accent); text-decoration: none; }
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.2em; }
+  .local-grid, .contact-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>💈 Wyatts Barbers</h1>
+  <p class="subtitle">Wolseley Road • Plymouth</p>
+  <p>Your friendly local barber — sharp cuts, honest prices, great chat</p>
+  <a href="#contact" class="cta">Book a Cut</a>
+</header>
+
+<section class="section" id="services">
+  <div class="container">
+    <h2>What We Do</h2>
+    <div class="services-grid">
+      <div class="service-card"><h3>✂️ Standard Cut</h3><p>Wash, cut &amp; style</p><p class="price">£14</p></div>
+      <div class="service-card"><h3>🧔 Beard Trim</h3><p>Neaten &amp; shape</p><p class="price">£8</p></div>
+      <div class="service-card"><h3>💇 Cut &amp; Beard</h3><p>The full works</p><p class="price">£20</p></div>
+      <div class="service-card"><h3>👦 Kids Cut</h3><p>Under 12</p><p class="price">£10</p></div>
+      <div class="service-card"><h3>🪒 Hot Towel Shave</h3><p>Relax &amp; refresh</p><p class="price">£16</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section local" id="local">
+  <div class="container">
+    <h2>Your Local Barber</h2>
+    <div class="local-grid">
+      <div>
+        <p>Wyatts has been serving the Wolseley Road community for years. We're the kind of barbershop where everybody knows your name — and your usual cut. Pop in for a trim, stay for the banter.</p>
+        <p style="margin-top:12px;">No appointment? No problem. Walk-ins always welcome.</p>
+      </div>
+      <ul>
+        <li>Walk-ins welcome every day</li>
+        <li>Card or cash — we don't mind</li>
+        <li>Student and OAP discounts</li>
+        <li>Family-friendly atmosphere</li>
+        <li>On-street parking outside</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section team" id="team">
+  <div class="container">
+    <h2>Meet the Team</h2>
+    <div class="team-grid">
+      <div class="team-member"><span class="avatar">👨</span><h3>Lee</h3><p>Owner &amp; Master Barber</p></div>
+      <div class="team-member"><span class="avatar">👨</span><h3>Jamie</h3><p>Senior Barber</p></div>
+      <div class="team-member"><span class="avatar">👩</span><h3>Chloe</h3><p>Barber &amp; Stylist</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container">
+    <h2>Come On In</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p><strong>📍 Address:</strong> Wolseley Road, Plymouth</p>
+        <p><strong>📞 Phone:</strong> <a href="tel:+441752000004">01752 000004</a></p>
+        <p><strong>✉️ Email:</strong> <a href="mailto:wyattsbarbers@yahoo.co.uk">wyattsbarbers@yahoo.co.uk</a></p>
+        <p><strong>🕐 Hours:</strong> Mon–Sat 8:30am–5:30pm</p>
+        <p style="margin-top:20px;color:#558888;">📍 Wolseley Road — opposite the Co-op</p>
+      </div>
+      <div style="background:linear-gradient(135deg,var(--teal),var(--dark-teal));border-radius:16px;height:220px;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1.2em;">
+        🗺️ Wolseley Road, Plymouth
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Wyatts Barbers, Plymouth</p>
+  <p>📧 <a href="mailto:wyattsbarbers@yahoo.co.uk">wyattsbarbers@yahoo.co.uk</a></p>
+</footer>
+</body>
+</html>
